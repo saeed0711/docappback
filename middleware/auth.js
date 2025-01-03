@@ -9,7 +9,7 @@ const jwt = require("jsonwebtoken");
   try{
     const decoded= jwt.verify(token,"secret")
     req.userid=decoded
-    console.log(decoded +"from auth");
+    console.log(decoded.id +"from auth");
     next()
 }catch(err){
     res.status(401).json({ message: "Invalid token" });

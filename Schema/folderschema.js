@@ -3,7 +3,8 @@ const mongoose=require("mongoose")
 const folderSchema=new mongoose.Schema({
 foldername:{
     type:String,
-    required:true
+    required:true,
+    unique:true
 },
 user:{
     type:mongoose.Schema.Types.ObjectId,
